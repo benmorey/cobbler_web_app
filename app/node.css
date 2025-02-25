@@ -1,0 +1,9 @@
+@import url(./globals.css);
+
+.contact_node {
+  background-color: var(--default_node);
+  padding: 1%;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
