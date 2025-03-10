@@ -1,38 +1,41 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Add this to your globals.css file */
 
-:root {
-  --background: #ffffff;
-  --foreground: #01462B;
-  --yellow: #ffb800;
-  --yellow_dark: #e98c12;
-  --red: #fb4b4E;
-  --red_darker: #f32023;
-  --blue: #1268D8;
-  --blue_darker: #0347be;
-  --default_node: var(--yellow);
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ReactFlow specific styles */
+.react-flow__node {
+  border-radius: 3px;
+  color: var(--foreground);
+  font-family: var(--font-geist-sans);
+}
+
+.react-flow__node-input {
+  background-color: var(--yellow);
+}
+
+.react-flow__node-default {
+  background-color: var(--blue);
+  color: white;
+}
+
+.react-flow__node-output {
+  background-color: var(--red);
+  color: white;
+}
+
+/* Custom sidebar styles to match your theme */
+.react-flow-sidebar {
+  background-color: var(--background);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--foreground);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #01462B;
-    --foreground: #ededed;
-    --yellow: #ffb800;
-    --yellow_dark: #e98c12;
-    --red: #fb4b4E;
-    --red_darker: #f32023;
-    --blue: #1268D8;
-    --blue_darker: #0347be;
-    --default_node: var(--yellow);
+  .react-flow-sidebar {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Poppins, Roboto, Gothic A1;
-}
-
-
-

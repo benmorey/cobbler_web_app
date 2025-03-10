@@ -1,4 +1,4 @@
-import UserNode from "./elements/user_node";
+import UserNode from "./user_node";
 
 export default function Home() {
   return <UserNode />;
